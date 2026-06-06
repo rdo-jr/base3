@@ -1,0 +1,6 @@
+node_modules
+pgdata
+logs
+.env
+app.stdout.log
+app.stderr.log
