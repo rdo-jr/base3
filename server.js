@@ -357,13 +357,6 @@ function getPool() {
 function createDbConfig(databaseOverride) {
     const ssl = shouldUseSsl();
 
-    if (DATABASE_URL) {
-        return {
-            connectionString: DATABASE_URL,
-            ssl
-        };
-    }
-
     if (PGHOST) {
         return {
             host: PGHOST,
@@ -371,6 +364,13 @@ function createDbConfig(databaseOverride) {
             user: PGUSER,
             password: PGPASSWORD || undefined,
             database: databaseOverride || PGDATABASE || 'postgres',
+            ssl
+        };
+    }
+
+    if (DATABASE_URL) {
+        return {
+            connectionString: DATABASE_URL,
             ssl
         };
     }
@@ -389,7 +389,7 @@ function shouldUseSsl() {
         return false;
     }
 
-    if (PGSSLMODE === 'require' || DATABASE_URL) {
+    if (PGSSLMODE === 'require' || DATABASE_URL || PGHOST) {
         return { rejectUnauthorized: false };
     }
 
