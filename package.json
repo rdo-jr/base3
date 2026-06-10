@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "mobile:sync": "npx cap sync android",
+    "mobile:open": "npx cap open android"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,9 @@
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
     "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "pg": "^8.21.0"

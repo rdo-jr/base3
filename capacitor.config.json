@@ -1,0 +1,13 @@
+{
+  "appId": "com.prsistemas.base3",
+  "appName": "PR Sistemas",
+  "webDir": "www",
+  "server": {
+    "url": "https://base3.onrender.com",
+    "cleartext": false,
+    "allowNavigation": [
+      "base3.onrender.com",
+      "dashboard.render.com"
+    ]
+  }
+}

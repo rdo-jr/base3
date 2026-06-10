@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PR Sistemas</string>
+    <string name="title_activity_main">PR Sistemas</string>
+    <string name="package_name">com.prsistemas.base3</string>
+    <string name="custom_url_scheme">com.prsistemas.base3</string>
+</resources>
