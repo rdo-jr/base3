@@ -4,3 +4,9 @@ logs/
 .env
 app.stdout.log
 app.stderr.log
+android/local.properties
+android/keystore.properties
+android/*.jks
+android/*.keystore
+android/app/build/
+android/build/
